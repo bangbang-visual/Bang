@@ -1,34 +1,35 @@
 import { BlogCard } from "@/components/blog-card"
+import { zhCN } from "@/lib/translations"
 
 export default function BlogPage() {
   const posts = [
     {
       id: "future-of-ai",
-      title: "The Future of AI Development",
-      excerpt: "Exploring the ethical implications and technological advancements in artificial intelligence.",
+      title: zhCN.blog.futureOfAI.title,
+      excerpt: zhCN.blog.futureOfAI.excerpt,
       date: "2023-05-15",
-      readingTime: "5 min read",
+      readingTime: zhCN.blog.futureOfAI.readingTime,
     },
     {
       id: "web3-revolution",
-      title: "The Web3 Revolution",
-      excerpt: "How blockchain technology is changing the way we think about ownership and digital assets.",
+      title: zhCN.blog.web3Revolution.title,
+      excerpt: zhCN.blog.web3Revolution.excerpt,
       date: "2023-04-22",
-      readingTime: "7 min read",
+      readingTime: zhCN.blog.web3Revolution.readingTime,
     },
     {
       id: "cybersecurity-tips",
-      title: "Essential Cybersecurity Tips for Developers",
-      excerpt: "Practical security measures every developer should implement to protect their applications.",
+      title: zhCN.blog.cybersecurityTips.title,
+      excerpt: zhCN.blog.cybersecurityTips.excerpt,
       date: "2023-03-10",
-      readingTime: "6 min read",
+      readingTime: zhCN.blog.cybersecurityTips.readingTime,
     },
     {
       id: "react-performance",
-      title: "Optimizing React Performance",
-      excerpt: "Advanced techniques to improve the performance of your React applications.",
+      title: zhCN.blog.reactPerformance.title,
+      excerpt: zhCN.blog.reactPerformance.excerpt,
       date: "2023-02-18",
-      readingTime: "8 min read",
+      readingTime: zhCN.blog.reactPerformance.readingTime,
     },
   ]
 
@@ -43,7 +44,7 @@ export default function BlogPage() {
         </div>
         <div className="terminal-content">
           <p className="mb-4">
-            <span className="text-primary">$</span> ls -la /articles
+            <span className="text-primary">$</span> {zhCN.blog.listPrompt}
           </p>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ProjectCard } from "@/components/project-card"
+import { zhCN } from "@/lib/translations"
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState<string>("all")
@@ -9,48 +10,48 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: "neural-network",
-      title: "Neural Network Visualizer",
-      description: "Interactive visualization of neural networks with real-time data processing and node connections.",
+      title: zhCN.projects.neuralNetwork.title,
+      description: zhCN.projects.neuralNetwork.description,
       image: "/placeholder.svg?height=400&width=600",
       technologies: ["React", "D3.js", "TensorFlow.js"],
       category: "ai",
     },
     {
       id: "crypto-dashboard",
-      title: "Crypto Dashboard",
-      description: "Real-time cryptocurrency tracking dashboard with customizable widgets and alerts.",
+      title: zhCN.projects.cryptoDashboard.title,
+      description: zhCN.projects.cryptoDashboard.description,
       image: "/placeholder.svg?height=400&width=600",
       technologies: ["Next.js", "WebSockets", "Chart.js"],
       category: "web",
     },
     {
       id: "ai-chatbot",
-      title: "AI Chatbot",
-      description: "Conversational AI assistant with natural language processing and machine learning capabilities.",
+      title: zhCN.projects.aiChatbot.title,
+      description: zhCN.projects.aiChatbot.description,
       image: "/placeholder.svg?height=400&width=600",
       technologies: ["Python", "NLP", "TensorFlow"],
       category: "ai",
     },
     {
       id: "blockchain-explorer",
-      title: "Blockchain Explorer",
-      description: "Tool for visualizing and exploring blockchain transactions and smart contracts.",
+      title: zhCN.projects.blockchainExplorer.title,
+      description: zhCN.projects.blockchainExplorer.description,
       image: "/placeholder.svg?height=400&width=600",
       technologies: ["React", "Ethers.js", "GraphQL"],
       category: "blockchain",
     },
     {
       id: "data-visualization",
-      title: "Data Visualization Platform",
-      description: "Interactive platform for creating and sharing data visualizations and insights.",
+      title: zhCN.projects.dataVisualization.title,
+      description: zhCN.projects.dataVisualization.description,
       image: "/placeholder.svg?height=400&width=600",
       technologies: ["D3.js", "React", "Node.js"],
       category: "data",
     },
     {
       id: "ar-navigation",
-      title: "AR Navigation System",
-      description: "Augmented reality navigation system for indoor and outdoor environments.",
+      title: zhCN.projects.arNavigation.title,
+      description: zhCN.projects.arNavigation.description,
       image: "/placeholder.svg?height=400&width=600",
       technologies: ["Unity", "ARKit", "C#"],
       category: "ar",
@@ -58,12 +59,12 @@ export default function ProjectsPage() {
   ]
 
   const categories = [
-    { id: "all", name: "All Projects" },
-    { id: "web", name: "Web Development" },
-    { id: "ai", name: "AI & Machine Learning" },
-    { id: "blockchain", name: "Blockchain" },
-    { id: "data", name: "Data Visualization" },
-    { id: "ar", name: "AR/VR" },
+    { id: "all", name: zhCN.projects.categories.all },
+    { id: "web", name: zhCN.projects.categories.web },
+    { id: "ai", name: zhCN.projects.categories.ai },
+    { id: "blockchain", name: zhCN.projects.categories.blockchain },
+    { id: "data", name: zhCN.projects.categories.data },
+    { id: "ar", name: zhCN.projects.categories.ar },
   ]
 
   const filteredProjects =
@@ -80,7 +81,7 @@ export default function ProjectsPage() {
         </div>
         <div className="terminal-content">
           <p className="mb-4">
-            <span className="text-primary">$</span> Displaying projects directory. Select category to filter results.
+            <span className="text-primary">$</span> {zhCN.projects.filterPrompt}
           </p>
         </div>
       </div>

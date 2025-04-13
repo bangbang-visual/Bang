@@ -4,16 +4,17 @@ import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
+import { zhCN } from "@/lib/translations"
 
 export function Navigation() {
   const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: "home", path: "/" },
-    { name: "projects", path: "/projects" },
-    { name: "blog", path: "/blog" },
-    { name: "about", path: "/about" },
+    { name: "首页", path: "/" },
+    { name: zhCN.nav.projects, path: "/projects" },
+    { name: zhCN.nav.blog, path: "/blog" },
+    { name: zhCN.nav.about, path: "/about" },
   ]
 
   return (
